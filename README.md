@@ -9,7 +9,7 @@
 <br>
 
 <p align="center">
-<b>Support NoteLoader and other Audica modding projects <a href="https://ko-fi.com/october_">here.</a></b><br>
+<b>Support NoteLoader and my other Audica modding projects <a href="https://ko-fi.com/october_">here.</a></b><br>
 
 <br>
 

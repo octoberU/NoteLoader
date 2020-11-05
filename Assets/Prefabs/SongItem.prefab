@@ -457,7 +457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 9afcb94e1b58c0542a90740d984d7972, type: 2}
-  radius: 18.89
+  radius: 18.22
 --- !u!114 &1861531482226904093
 MonoBehaviour:
   m_ObjectHideFlags: 0
