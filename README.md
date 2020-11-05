@@ -4,7 +4,7 @@
 
 ![Banner](https://github.com/octoberU/NoteLoader/raw/main/.github/Banner.png "Banner")
 
-NoteLoader provides audica players a way to download, delete or edit `.audica` files on their Quest without requiring a PC.  
+### NoteLoader provides audica players a way to download, delete or edit `.audica` files on their Quest without requiring a PC.  
 
 <br>
 
