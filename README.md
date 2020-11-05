@@ -4,7 +4,7 @@
 
 ![Banner](https://github.com/octoberU/NoteLoader/raw/main/.github/Banner.png "Banner")
 
-### NoteLoader provides audica players a way to download, delete or edit `.audica` files on their Quest without requiring a PC.  
+ NoteLoader provides audica players a way to download, delete or edit `.audica` files on their Quest without requiring a PC.  
 
 <br>
 
@@ -16,7 +16,7 @@
 # Installation
 * Get the latest release from [here](https://github.com/octoberU/NoteLoader/releases)
 * Install the `.apk` using [SideQuest](https://sidequestvr.com/) or an android file manager.
-* Launch the app from `Unknown Sources`.
+* Launch the app from `Unknown Sources`
 
 
 
