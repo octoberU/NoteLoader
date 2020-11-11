@@ -3,6 +3,7 @@ using NoteLoader;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using TMPro;
@@ -29,14 +30,27 @@ public class DebugTools : MonoBehaviour
 
         //try
         //{
-        //    foreach (var audicaFilePath in GetAllFiles(NLUtility.GetAudicaDirectory(), "*.audica"))
-        //    {
-        //        //debugString += "Found Audica File:" + audicaFile + Environment.NewLine;
-        //        var audica = new Audica(audicaFilePath);
-        //        debugString += $"{audica.desc.title}-{audica.desc.artist} mapped by {audica.desc.author}";
+        Stopwatch sw = new Stopwatch();
+        sw.Start();
+        foreach (var audicaFilePath in GetAllFiles(NLUtility.GetAudicaDirectory(), "*.audica"))
+        {
+            //debugString += "Found Audica File:" + audicaFile + Environment.NewLine;
 
-        //    }
-        //    debugText.text = debugString;
+            //Method 1
+            //var audica = new Audica(audicaFilePath);
+            //debugString += $"{audica.desc.title}-{audica.desc.artist} mapped by {audica.desc.author}";
+
+            //var audica = Audica.GetMetadata(audicaFilePath);
+            //debugString += $"{audica.desc.title} - {audica.fileInfo.FullName} \n";
+
+
+        }
+        print($"Loaded songs in: {sw.ElapsedMilliseconds}ms");
+        debugText.text = debugString;
+
+
+        NLUtility.PlayPreviewFromAudicaFile(this, FindObjectOfType<AudioSource>(), Path.Combine(NLUtility.GetAudicaDirectory(), "SadSpring-bor.audica"));
+
         //}
         //catch (Exception e)
         //{
@@ -44,7 +58,7 @@ public class DebugTools : MonoBehaviour
         //    debugText.text = debugString;
         //}
 
-       
+
     }
 
     private static IEnumerable<string> GetAllFiles(string path, string searchPattern)
