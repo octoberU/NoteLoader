@@ -25,7 +25,7 @@ namespace NoteLoader
         public static string GetAudicaDirectory()
         {
 #if UNITY_EDITOR
-            return @"E:\Steam\steamapps\common\Audica\Audica_Data\StreamingAssets\HmxAudioAssets\songs";
+            return @"E:\Steam\steamapps\common\Audica\Audica_Data\StreamingAssets\HmxAudioAssets\songs_og";
 #endif
 
             string androidPath = Directory.GetParent(Directory.GetParent(Directory.GetParent(Application.persistentDataPath).ToString()).ToString()).ToString();

@@ -15,15 +15,21 @@ namespace NoteLoader.Cache
         
         public static void ProcessSongs()
         {
-            if (songFolderHash == GetLocalFolderHash()) return;
-            songs = new Dictionary<string, Audica.AudicaMetadata>();
-            var localPaths = NLUtility.GetLocalAudicaFiles();
-            int numSongs = localPaths.Length;
-            for (int i = 0; i < numSongs; i++)
+            string newFolderHash = GetLocalFolderHash();
+            if (songFolderHash == newFolderHash) return;
+            else
             {
-                var audicaMeta = Audica.GetMetadata(localPaths[i]);
-                songs.Add(audicaMeta.weakHash, audicaMeta);
+                songs = new Dictionary<string, Audica.AudicaMetadata>();
+                var localPaths = NLUtility.GetLocalAudicaFiles();
+                int numSongs = localPaths.Length;
+                for (int i = 0; i < numSongs; i++)
+                {
+                    var audicaMeta = Audica.GetMetadata(localPaths[i]);
+                    songs.Add(audicaMeta.weakHash, audicaMeta);
+                }
+                songFolderHash = newFolderHash;
             }
+            
         }
 
         private static string GetLocalFolderHash()

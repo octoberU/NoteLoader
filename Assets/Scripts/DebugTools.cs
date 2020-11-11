@@ -49,7 +49,7 @@ public class DebugTools : MonoBehaviour
         debugText.text = debugString;
 
 
-        NLUtility.PlayPreviewFromAudicaFile(this, FindObjectOfType<AudioSource>(), Path.Combine(NLUtility.GetAudicaDirectory(), "SadSpring-bor.audica"));
+        NLUtility.PlayPreviewFromAudicaFile(this, FindObjectOfType<AudioSource>(), Path.Combine(NLUtility.GetAudicaDirectory(), "7Years-Continuum.audica"));
 
         //}
         //catch (Exception e)
